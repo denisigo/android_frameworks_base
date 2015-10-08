@@ -90,6 +90,11 @@ public final class BluetoothA2dp implements BluetoothProfile {
     public static final String ACTION_PLAYING_STATE_CHANGED =
         "android.bluetooth.a2dp.profile.action.PLAYING_STATE_CHANGED";
 
+    /** @hide */
+    @SdkConstant(SdkConstantType.BROADCAST_INTENT_ACTION)
+    public static final String ACTION_AVRCP_CONNECTION_STATE_CHANGED =
+            "android.bluetooth.a2dp.profile.action.AVRCP_CONNECTION_STATE_CHANGED";
+
     /**
      * A2DP sink device is streaming music. This state can be one of
      * {@link #EXTRA_STATE} or {@link #EXTRA_PREVIOUS_STATE} of

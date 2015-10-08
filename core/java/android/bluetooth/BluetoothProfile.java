@@ -106,6 +106,12 @@ public interface BluetoothProfile {
     public static final int MAP = 9;
 
     /**
+     * AVRCP Controller Profile
+     * @hide
+     */
+    public static final int AVRCP_CONTROLLER = 11;
+
+    /**
      * SAP
      * @hide
      */
