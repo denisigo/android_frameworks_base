@@ -50,8 +50,8 @@ public final class BluetoothHidDeviceAppConfiguration implements Parcelable {
         return 0;
     }
 
-    public static final Parcelable.Creator<BluetoothHidDeviceAppConfiguration> CREATOR =
-        new Parcelable.Creator<BluetoothHidDeviceAppConfiguration>() {
+    public static final Creator<BluetoothHidDeviceAppConfiguration> CREATOR =
+        new Creator<BluetoothHidDeviceAppConfiguration>() {
 
         @Override
         public BluetoothHidDeviceAppConfiguration createFromParcel(Parcel in) {

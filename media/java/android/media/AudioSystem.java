@@ -281,6 +281,7 @@ public class AudioSystem
     public static final int DEVICE_IN_PROXY = DEVICE_BIT_IN | 0x4000;
     public static final int DEVICE_IN_FM_RX = DEVICE_BIT_IN | 0x8000;
     public static final int DEVICE_IN_FM_RX_A2DP = DEVICE_BIT_IN | 0x10000;
+    public static final int DEVICE_IN_BLUETOOTH_A2DP = DEVICE_BIT_IN | 0x20000;
     public static final int DEVICE_IN_DEFAULT = DEVICE_BIT_IN | DEVICE_BIT_DEFAULT;
 
     public static final int DEVICE_IN_ALL = (DEVICE_IN_COMMUNICATION |
@@ -295,6 +296,7 @@ public class AudioSystem
                                              DEVICE_IN_ANLG_DOCK_HEADSET |
                                              DEVICE_IN_DGTL_DOCK_HEADSET |
                                              DEVICE_IN_USB_ACCESSORY |
+                                             DEVICE_IN_BLUETOOTH_A2DP |
                                              DEVICE_IN_USB_DEVICE |
                                              DEVICE_IN_PROXY |
                                              DEVICE_IN_FM_RX |

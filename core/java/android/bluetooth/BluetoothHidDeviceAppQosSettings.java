@@ -64,8 +64,8 @@ public final class BluetoothHidDeviceAppQosSettings implements Parcelable {
         return 0;
     }
 
-    public static final Parcelable.Creator<BluetoothHidDeviceAppQosSettings> CREATOR =
-        new Parcelable.Creator<BluetoothHidDeviceAppQosSettings>() {
+    public static final Creator<BluetoothHidDeviceAppQosSettings> CREATOR =
+        new Creator<BluetoothHidDeviceAppQosSettings>() {
 
         @Override
         public BluetoothHidDeviceAppQosSettings createFromParcel(Parcel in) {

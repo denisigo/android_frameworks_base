@@ -1,7 +1,5 @@
 /*
- * Copyright (C) 2013 The Linux Foundation. All rights reserved
- * Not a Contribution.
- * Copyright (C) 2010 The Android Open Source Project
+ * Copyright (C) 2010-2014 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -106,10 +104,28 @@ public interface BluetoothProfile {
     public static final int MAP = 9;
 
     /**
+     * A2DP Sink Profile
+     * @hide
+     */
+    public static final int A2DP_SINK = 10;
+
+    /**
      * AVRCP Controller Profile
      * @hide
      */
     public static final int AVRCP_CONTROLLER = 11;
+
+    /**
+     * Headset Client - HFP HF Role
+     * @hide
+     */
+    public static final int HEADSET_CLIENT = 16;
+
+    /**
+     * HID device
+     * @hide
+     */
+    static public final int HID_DEVICE = 17;
 
     /**
      * SAP
@@ -117,41 +133,12 @@ public interface BluetoothProfile {
      */
     public static final int SAP = 20;
 
-     /**
-     * Handsfree Client - HFP HF Role
-     * @hide
-     */
-    public static final int HANDSFREE_CLIENT = 10;
-
-     /**
-     * A2dp Source
-     * @hide
-     */
-    public static final int PROFILE_A2DP_SRC = 1;
-
-    /**
-    * A2dp Sink
-    * @hide
-    */
-    public static final int PROFILE_A2DP_SNK = 2;
-
-    /**
-    * Profile A2dp undefined
-    * @hide
-    */
-    public static final int PROFILE_A2DP_UNDEFINED = -1;
-
     /**
      * DUN
      * @hide
      */
-    public static final int DUN = 21;
 
-    /**
-     * HID device
-     * @hide
-     */
-    static public final int HID_DEVICE = 22;
+    public static final int DUN = 21;
 
     /**
      * Default priority for devices that we try to auto-connect to and
