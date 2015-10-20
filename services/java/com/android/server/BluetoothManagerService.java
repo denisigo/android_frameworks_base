@@ -449,32 +449,19 @@ class BluetoothManagerService extends IBluetoothManager.Stub {
         return true;
     }
 
-    public boolean disable(String callingPackage, boolean persist) {
+    public boolean disable(boolean persist) {
         mContext.enforceCallingOrSelfPermission(BLUETOOTH_ADMIN_PERM,
-                                                "Need BLUETOOTH ADMIN permissicacheNameAndAddresson");
+                "Need BLUETOOTH ADMIN permissicacheNameAndAddresson");
 
         if ((Binder.getCallingUid() != Process.SYSTEM_UID) &&
-            (!checkIfCallerIsForegroundUser())) {
+                (!checkIfCallerIsForegroundUser())) {
             Log.w(TAG,"disable(): not allowed for non-active and non system user");
             return false;
         }
 
-        if (!mIsBluetoothServiceConnected || mState != BluetoothAdapter.STATE_ON)
-        {
-            Log.d(TAG, "Disable(): Service is not Connected Or Bluetooth is not enabled");
-            return true;
-        }
-
         if (DBG) {
             Log.d(TAG,"disable(): mBluetooth = " + mBluetooth +
-                " mBinding = " + mBinding);
-        }
-
-        AppOpsManager appOps = (AppOpsManager) mContext.getSystemService(Context.APP_OPS_SERVICE);
-        int callingUid = Binder.getCallingUid();
-        if (appOps.noteOp(AppOpsManager.OP_BLUETOOTH_CHANGE, callingUid, callingPackage) !=
-                AppOpsManager.MODE_ALLOWED) {
-            return false;
+                    " mBinding = " + mBinding);
         }
 
         synchronized(mReceiver) {
@@ -1252,7 +1239,7 @@ class BluetoothManagerService extends IBluetoothManager.Stub {
                     || isSystemUi;
             if (DBG) {
                 Log.d(TAG, "checkIfCallerIsForegroundUser: valid=" + valid
-                    + " callingUser=" + callingUser
+                        + " callingUser=" + callingUser
                     + " foregroundUser=" + foregroundUser);
             }
         } finally {

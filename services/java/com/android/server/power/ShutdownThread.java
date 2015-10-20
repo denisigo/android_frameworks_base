@@ -496,7 +496,7 @@ public final class ShutdownThread extends Thread {
                     if (!bluetoothOff) {
                         Log.w(TAG, "Disabling Bluetooth...");
                         // disable but don't persist new state
-                        bluetooth.disable(mContext.getBasePackageName(), false);
+                        bluetooth.disable(false);
                     }
                 } catch (RemoteException ex) {
                     Log.e(TAG, "RemoteException during bluetooth shutdown", ex);
